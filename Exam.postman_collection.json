@@ -1,0 +1,1089 @@
+{
+	"info": {
+		"_postman_id": "545db0eb-d841-47e8-801b-8e36b50caebe",
+		"name": "Exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42806379"
+	},
+	"item": [
+		{
+			"name": "To post product",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "batman",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "this is a batman",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "Electronics",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/home/growlt315/Downloads/Background Image for download.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "To post product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "batman",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "this is a batman",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Electronics",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/home/growlt315/Downloads/Background Image for download.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "258"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"102-QD0CFprVVa9FcueCOtojoZuZ200\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Mar 2025 10:01:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"batman\",\n    \"description\": \"this is a batman\",\n    \"price\": 100,\n    \"category\": \"Electronics\",\n    \"images\": [\n        \"uploads/1741687311436.jpg\"\n    ],\n    \"_id\": \"67d00a0f7b1803feb0341f67\",\n    \"reviews\": [],\n    \"createdAt\": \"2025-03-11T10:01:51.453Z\",\n    \"updatedAt\": \"2025-03-11T10:01:51.453Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "To update the product ",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n  \"name\": \"Updated Batman\",\n  \"price\": 150\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products/67d00a0f7b1803feb0341f67",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"67d00a0f7b1803feb0341f67"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "To update the product",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n  \"name\": \"Updated Batman\",\n  \"price\": 150\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/products/67d00a0f7b1803feb0341f67",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"products",
+								"67d00a0f7b1803feb0341f67"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "266"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10a-jGsBkjWWTkZlsaK8zw9M7q5Fb40\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Mar 2025 10:11:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"67d00a0f7b1803feb0341f67\",\n    \"name\": \"Updated Batman\",\n    \"description\": \"this is a batman\",\n    \"price\": 150,\n    \"category\": \"Electronics\",\n    \"images\": [\n        \"uploads/1741687311436.jpg\"\n    ],\n    \"reviews\": [],\n    \"createdAt\": \"2025-03-11T10:01:51.453Z\",\n    \"updatedAt\": \"2025-03-11T10:11:47.684Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "to get the posted items",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/products?category=Electronics&page=1&limit=10&sort=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Electronics"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "sort",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "to get the posted items",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/products?category=Electronics&page=1&limit=10&sort=asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Electronics"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "sort",
+									"value": "asc"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "416"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a0-TJz4lHPiknIKlezrMrEdGd1eMWA\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Mar 2025 10:34:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"docs\": [\n        {\n            \"_id\": \"67d00a0f7b1803feb0341f67\",\n            \"name\": \"Updated Batman\",\n            \"description\": \"this is a batman\",\n            \"price\": 150,\n            \"category\": \"Electronics\",\n            \"images\": [\n                \"uploads/1741687311436.jpg\"\n            ],\n            \"reviews\": [],\n            \"createdAt\": \"2025-03-11T10:01:51.453Z\",\n            \"updatedAt\": \"2025-03-11T10:11:47.684Z\",\n            \"__v\": 0\n        }\n    ],\n    \"totalDocs\": 1,\n    \"limit\": 10,\n    \"totalPages\": 1,\n    \"page\": 1,\n    \"pagingCounter\": 1,\n    \"hasPrevPage\": false,\n    \"hasNextPage\": false,\n    \"prevPage\": null,\n    \"nextPage\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "to add reviews",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"rating\": 5,\n  \"comment\": \"Great product!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products/67d00a0f7b1803feb0341f67/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"67d00a0f7b1803feb0341f67",
+						"reviews"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "to add reviews",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"rating\": 5,\n  \"comment\": \"Great product!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/products/67d00a0f7b1803feb0341f67/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"products",
+								"67d00a0f7b1803feb0341f67",
+								"reviews"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-GzWSP9bqbbJg9k1OJ1mY9xZd39w\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Mar 2025 10:42:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Review added\"\n}"
+				}
+			]
+		},
+		{
+			"name": "to register the user ",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "to register the user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "277"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"115-2wHO+ug+qPYaFZ7HNiv0FCIvQ7I\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Mar 2025 11:46:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"67d0227db13f41478a8bc921\",\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"isAdmin\": false,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAyMjdkYjEzZjQxNDc4YThiYzkyMSIsImlhdCI6MTc0MTY5MzU2NSwiZXhwIjoxNzQ0Mjg1NTY1fQ.jKIPJEPDkLIL8JiSaZx5SKja8YXEVUgH55H13ZfvKwM\"\n}"
+				}
+			]
+		},
+		{
+			"name": "to login the user ",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "to login the user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "277"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"115-pQTIsetT9ZGbrLd0MzAGAEXINC0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Mar 2025 11:48:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"67d0227db13f41478a8bc921\",\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"isAdmin\": false,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAyMjdkYjEzZjQxNDc4YThiYzkyMSIsImlhdCI6MTc0MTY5MzczMiwiZXhwIjoxNzQ0Mjg1NzMyfQ.l7SF_AaysD3WZ3l8pNs-HrTY1kpR8ZEAuKUiogWXo-s\"\n}"
+				}
+			]
+		},
+		{
+			"name": "created an order of a login user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAyMjdkYjEzZjQxNDc4YThiYzkyMSIsImlhdCI6MTc0MTY5MzczMiwiZXhwIjoxNzQ0Mjg1NzMyfQ.l7SF_AaysD3WZ3l8pNs-HrTY1kpR8ZEAuKUiogWXo-s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customerName\": \"John Doe\",\n  \"customerEmail\": \"john@example.com\",\n  \"products\": [\n    {\n      \"productId\": \"67d00a0f7b1803feb0341f67\",\n      \"quantity\": 2\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "created an order of a login user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAyMjdkYjEzZjQxNDc4YThiYzkyMSIsImlhdCI6MTc0MTY5MzczMiwiZXhwIjoxNzQ0Mjg1NzMyfQ.l7SF_AaysD3WZ3l8pNs-HrTY1kpR8ZEAuKUiogWXo-s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"customerName\": \"John Doe\",\n  \"customerEmail\": \"john@example.com\",\n  \"products\": [\n    {\n      \"productId\": \"67d00a0f7b1803feb0341f67\",\n      \"quantity\": 2\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "351"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15f-UEiffAgvYaQf/kAHeRwrwqq4W/A\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Mar 2025 11:59:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": \"67d0227db13f41478a8bc921\",\n    \"customerName\": \"John Doe\",\n    \"customerEmail\": \"john@example.com\",\n    \"products\": [\n        {\n            \"productId\": \"67d00a0f7b1803feb0341f67\",\n            \"quantity\": 2,\n            \"_id\": \"67d02586a530a456a63dc6cc\"\n        }\n    ],\n    \"status\": \"Pending\",\n    \"totalPrice\": 300,\n    \"_id\": \"67d02586a530a456a63dc6cb\",\n    \"createdAt\": \"2025-03-11T11:59:02.655Z\",\n    \"updatedAt\": \"2025-03-11T11:59:02.655Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "to update the details of order ",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAyMjdkYjEzZjQxNDc4YThiYzkyMSIsImlhdCI6MTc0MTY5MzczMiwiZXhwIjoxNzQ0Mjg1NzMyfQ.l7SF_AaysD3WZ3l8pNs-HrTY1kpR8ZEAuKUiogWXo-s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"Shipped\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/orders/67d02586a530a456a63dc6cb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"67d02586a530a456a63dc6cb"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "to update the details of order",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAyMjdkYjEzZjQxNDc4YThiYzkyMSIsImlhdCI6MTc0MTY5MzczMiwiZXhwIjoxNzQ0Mjg1NzMyfQ.l7SF_AaysD3WZ3l8pNs-HrTY1kpR8ZEAuKUiogWXo-s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"Shipped\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/orders/67d02586a530a456a63dc6cb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"orders",
+								"67d02586a530a456a63dc6cb"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "351"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15f-QJB0jlIc8NAz0dv2k1CdxUBy1tA\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Mar 2025 12:22:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"67d02586a530a456a63dc6cb\",\n    \"user\": \"67d0227db13f41478a8bc921\",\n    \"customerName\": \"John Doe\",\n    \"customerEmail\": \"john@example.com\",\n    \"products\": [\n        {\n            \"productId\": \"67d00a0f7b1803feb0341f67\",\n            \"quantity\": 2,\n            \"_id\": \"67d02586a530a456a63dc6cc\"\n        }\n    ],\n    \"status\": \"Shipped\",\n    \"totalPrice\": 300,\n    \"createdAt\": \"2025-03-11T11:59:02.655Z\",\n    \"updatedAt\": \"2025-03-11T12:22:37.097Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "to get the order of a particular user ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAyMjdkYjEzZjQxNDc4YThiYzkyMSIsImlhdCI6MTc0MTY5MzczMiwiZXhwIjoxNzQ0Mjg1NzMyfQ.l7SF_AaysD3WZ3l8pNs-HrTY1kpR8ZEAuKUiogWXo-s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/orders/67d02586a530a456a63dc6cb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"67d02586a530a456a63dc6cb"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "to get the order of a particular user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAyMjdkYjEzZjQxNDc4YThiYzkyMSIsImlhdCI6MTc0MTY5MzczMiwiZXhwIjoxNzQ0Mjg1NzMyfQ.l7SF_AaysD3WZ3l8pNs-HrTY1kpR8ZEAuKUiogWXo-s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/orders/67d02586a530a456a63dc6cb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"orders",
+								"67d02586a530a456a63dc6cb"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "741"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e5-XHPVmoYTCX3+PB/B/bYmxB2qn4I\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Mar 2025 12:52:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"67d02586a530a456a63dc6cb\",\n    \"user\": \"67d0227db13f41478a8bc921\",\n    \"customerName\": \"John Doe\",\n    \"customerEmail\": \"john@example.com\",\n    \"products\": [\n        {\n            \"productId\": {\n                \"_id\": \"67d00a0f7b1803feb0341f67\",\n                \"name\": \"Updated Batman\",\n                \"description\": \"this is a batman\",\n                \"price\": 150,\n                \"category\": \"Electronics\",\n                \"images\": [\n                    \"uploads/1741687311436.jpg\"\n                ],\n                \"reviews\": [\n                    {\n                        \"rating\": 5,\n                        \"comment\": \"Great product!\",\n                        \"_id\": \"67d0137e4dfc9fc07df34d59\",\n                        \"createdAt\": \"2025-03-11T10:42:06.623Z\",\n                        \"updatedAt\": \"2025-03-11T10:42:06.623Z\"\n                    }\n                ],\n                \"createdAt\": \"2025-03-11T10:01:51.453Z\",\n                \"updatedAt\": \"2025-03-11T10:42:06.623Z\",\n                \"__v\": 1\n            },\n            \"quantity\": 2,\n            \"_id\": \"67d02586a530a456a63dc6cc\"\n        }\n    ],\n    \"status\": \"Shipped\",\n    \"totalPrice\": 300,\n    \"createdAt\": \"2025-03-11T11:59:02.655Z\",\n    \"updatedAt\": \"2025-03-11T12:22:37.097Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "to get all the details of the orders of a particular user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAyMjdkYjEzZjQxNDc4YThiYzkyMSIsImlhdCI6MTc0MTY5MzczMiwiZXhwIjoxNzQ0Mjg1NzMyfQ.l7SF_AaysD3WZ3l8pNs-HrTY1kpR8ZEAuKUiogWXo-s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "to get all the details of the orders of a particular user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAyMjdkYjEzZjQxNDc4YThiYzkyMSIsImlhdCI6MTc0MTY5MzczMiwiZXhwIjoxNzQ0Mjg1NzMyfQ.l7SF_AaysD3WZ3l8pNs-HrTY1kpR8ZEAuKUiogWXo-s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2375"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"947-Za4Zr8NfCUEkfb3xywiaTO6RxUc\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Mar 2025 13:04:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"docs\": [\n        {\n            \"_id\": \"67d02d498925887cbcc82ac3\",\n            \"user\": \"67d0227db13f41478a8bc921\",\n            \"customerName\": \"John Doe\",\n            \"customerEmail\": \"john@example.com\",\n            \"products\": [\n                {\n                    \"productId\": {\n                        \"_id\": \"67d00a0f7b1803feb0341f67\",\n                        \"name\": \"Updated Batman\",\n                        \"description\": \"this is a batman\",\n                        \"price\": 150,\n                        \"category\": \"Electronics\",\n                        \"images\": [\n                            \"uploads/1741687311436.jpg\"\n                        ],\n                        \"reviews\": [\n                            {\n                                \"rating\": 5,\n                                \"comment\": \"Great product!\",\n                                \"_id\": \"67d0137e4dfc9fc07df34d59\",\n                                \"createdAt\": \"2025-03-11T10:42:06.623Z\",\n                                \"updatedAt\": \"2025-03-11T10:42:06.623Z\"\n                            }\n                        ],\n                        \"createdAt\": \"2025-03-11T10:01:51.453Z\",\n                        \"updatedAt\": \"2025-03-11T10:42:06.623Z\",\n                        \"__v\": 1\n                    },\n                    \"quantity\": 3,\n                    \"_id\": \"67d02d498925887cbcc82ac4\"\n                }\n            ],\n            \"status\": \"Pending\",\n            \"totalPrice\": 450,\n            \"createdAt\": \"2025-03-11T12:32:09.125Z\",\n            \"updatedAt\": \"2025-03-11T12:32:09.125Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67d02d35a530a456a63dc6db\",\n            \"user\": \"67d0227db13f41478a8bc921\",\n            \"customerName\": \"John Doe\",\n            \"customerEmail\": \"john@example.com\",\n            \"products\": [\n                {\n                    \"productId\": {\n                        \"_id\": \"67d00a0f7b1803feb0341f67\",\n                        \"name\": \"Updated Batman\",\n                        \"description\": \"this is a batman\",\n                        \"price\": 150,\n                        \"category\": \"Electronics\",\n                        \"images\": [\n                            \"uploads/1741687311436.jpg\"\n                        ],\n                        \"reviews\": [\n                            {\n                                \"rating\": 5,\n                                \"comment\": \"Great product!\",\n                                \"_id\": \"67d0137e4dfc9fc07df34d59\",\n                                \"createdAt\": \"2025-03-11T10:42:06.623Z\",\n                                \"updatedAt\": \"2025-03-11T10:42:06.623Z\"\n                            }\n                        ],\n                        \"createdAt\": \"2025-03-11T10:01:51.453Z\",\n                        \"updatedAt\": \"2025-03-11T10:42:06.623Z\",\n                        \"__v\": 1\n                    },\n                    \"quantity\": 3,\n                    \"_id\": \"67d02d35a530a456a63dc6dc\"\n                }\n            ],\n            \"status\": \"Pending\",\n            \"totalPrice\": 450,\n            \"createdAt\": \"2025-03-11T12:31:49.569Z\",\n            \"updatedAt\": \"2025-03-11T12:31:49.569Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67d02586a530a456a63dc6cb\",\n            \"user\": \"67d0227db13f41478a8bc921\",\n            \"customerName\": \"John Doe\",\n            \"customerEmail\": \"john@example.com\",\n            \"products\": [\n                {\n                    \"productId\": {\n                        \"_id\": \"67d00a0f7b1803feb0341f67\",\n                        \"name\": \"Updated Batman\",\n                        \"description\": \"this is a batman\",\n                        \"price\": 150,\n                        \"category\": \"Electronics\",\n                        \"images\": [\n                            \"uploads/1741687311436.jpg\"\n                        ],\n                        \"reviews\": [\n                            {\n                                \"rating\": 5,\n                                \"comment\": \"Great product!\",\n                                \"_id\": \"67d0137e4dfc9fc07df34d59\",\n                                \"createdAt\": \"2025-03-11T10:42:06.623Z\",\n                                \"updatedAt\": \"2025-03-11T10:42:06.623Z\"\n                            }\n                        ],\n                        \"createdAt\": \"2025-03-11T10:01:51.453Z\",\n                        \"updatedAt\": \"2025-03-11T10:42:06.623Z\",\n                        \"__v\": 1\n                    },\n                    \"quantity\": 2,\n                    \"_id\": \"67d02586a530a456a63dc6cc\"\n                }\n            ],\n            \"status\": \"Shipped\",\n            \"totalPrice\": 300,\n            \"createdAt\": \"2025-03-11T11:59:02.655Z\",\n            \"updatedAt\": \"2025-03-11T12:22:37.097Z\",\n            \"__v\": 0\n        }\n    ],\n    \"totalDocs\": 3,\n    \"limit\": 10,\n    \"totalPages\": 1,\n    \"page\": 1,\n    \"pagingCounter\": 1,\n    \"hasPrevPage\": false,\n    \"hasNextPage\": false,\n    \"prevPage\": null,\n    \"nextPage\": null\n}"
+				}
+			]
+		}
+	]
+}
